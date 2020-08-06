@@ -1,0 +1,24 @@
+if (_degree >= 80.00 && _degree <= 110.00 && _distance != 0) {
+          aws.sendDirection("DOWN", _robotIdController.value);
+
+        } else if ((_degree >= 350.00 && _degree <= 360.00 && _distance != 0) ||
+            (_degree > 0.00 && _degree <= 10.00 && _distance != 0)) {
+          aws.sendDirection("RIGHT", _robotIdController.value);
+
+        } else if (_degree >= 170.00 && _degree <= 190.00 && _distance != 0) {
+          aws.sendDirection("LEFT", _robotIdController.value);
+
+        } else if (_degree >= 260.00 && _degree <= 280.00 && _distance != 0) {
+          aws.sendDirection("UP", _robotIdController.value);
+
+        } else if (_degree > 10.00 && _degree < 80.00 && _distance != 0) {
+          aws.sendDirection("DOWN RIGHT", _robotIdController.value);
+
+        } else if (_degree > 110.00 && _degree < 170.00 && _distance != 0) {
+          aws.sendDirection("DOWN LEFT", _robotIdController.value);
+
+        } else if (_degree > 190.00 && _degree < 260.00 && _distance != 0) {
+          aws.sendDirection("UP LEFT", _robotIdController.value);
+
+        } else if (_degree > 280.00 && _degree < 350.00 && _distance != 0) {
+          aws.sendDirection("UP RIGHT", _robotIdController.value);
