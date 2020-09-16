@@ -52,7 +52,12 @@ $ source ~/catkin_ws/devel/setup.bash
 
 3. Robot package installation / Installation du paquet du robot
 
+For simulation:
 * Download repo: [Robot package](https://github.com/mario-serna/pioneer_p3dx_model.git)
+
+For testing on the real P3dx / Pour testé sur le robot réel:
+* Download (version: ARIA 2.9.4 - Ubuntu 16.04 (xenial) or later, amd 32/64-bit architecture): [Robot controllers](https://web.archive.org/web/20180205212122/http://robots.mobilerobots.com/wiki/Aria)
+
 * Installation: 
 ```
 $ cd <catkin_ws>/src
@@ -62,11 +67,23 @@ $ catkin_make
 ```
 
 4.  Python script
+
+**EN**: 
 * Download: [test_mover.py](https://github.com/zakariaBoukernafa/Teleport/blob/master/ROS_Simulation/test_mover.py)
-* Paste it inside: 
+* Create a package inside ~/carkin_ws/src ([How to create ROS package](http://wiki.ros.org/ROS/Tutorials/CreatingPackage)), then: 
+* Paste python script inside your newely create pakcage: 
 ```bash
-$ ~/catkin_ws/src
+$ ~/catkin_ws/src/<your_package>
 ```
+
+**FR**: 
+* Téléchargez: [test_mover.py](https://github.com/zakariaBoukernafa/Teleport/blob/master/ROS_Simulation/test_mover.py)
+* Créez un package dans ~/carkin_ws/src ([Comment créé un ROS package](http://wiki.ros.org/ROS/Tutorials/CreatingPackage)), et: 
+* Collez le python script dans ce nouveau package que vous avez créé: 
+```bash
+$ ~/catkin_ws/src/<nom_de_votre_package>
+```
+
 
 ## Usage / Utilisation
 
@@ -109,12 +126,18 @@ from websocket import create_connection
 
 **FR** :  Ceci est très important car il indique à rospy le nom du nœud (test_mover). Tant que rospy ne dispose pas de cette information, il ne peut pas commencer à communiquer avec le ROS Master.
 
+***NOTE (en):*** WHEN TESTING ON THE REAL ROBOT, change topic name below to: 'RosAria/cmd_vel'
+
+***NOTE (fr):*** POUR LE TEST SUR LE ROBOT REEL, changez le nom du Topic ci-dessous a: 'RosAria/cmd_vel'
+
 ```python
 #ROS components initialization
+
 rospy.init_node('test_mover', anonymous=True)
 pubToTopic = rospy.Publisher("p3dx/cmd_vel", Twist, queue_size=10)
+
 ```
-## Configuration / Configuration
+## Configuration
 **EN**: You will need to put your own endpoint link to the Websocket inside the create_connection().
 
 ```python
