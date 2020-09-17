@@ -118,7 +118,7 @@ To build and run the sample application, first obtain an app ID:
 1.  Create a developer account at [agora.io](https://dashboard.agora.io/signin/). Once you finish the sign-up process, you are redirected to the dashboard.
 2.  Navigate in the dashboard tree on the left to **Projects** > **Project List**.
 3.  Copy the app ID that you obtain from the dashboard into a text file.
-Open the [settings.dart](https://github.com/zakariaBoukernafa/Teleport/blob/master/lib/modes/agora/utils/settings.dart) file and add the app ID.
+Open the [settings.dart](https://github.com/zakariaBoukernafa/Teleport/blob/master/Mobile_Application/lib/modes/agora/utils/settings.dart) file and add the app ID.
 
     ````
       const APP_ID = "";
@@ -126,7 +126,7 @@ Open the [settings.dart](https://github.com/zakariaBoukernafa/Teleport/blob/mast
 ### API Gateway WebSocket endpoint Configuration
 
 after deploying the WebSocket into AWS or any other cloud provider,go to 
-[aws.dart](https://github.com/zakariaBoukernafa/Teleport/blob/master/lib/services/aws.dart) and add the WebSocket endpoint url.
+[aws.dart](https://github.com/zakariaBoukernafa/Teleport/blob/master/Mobile_Application/lib/services/aws.dart) and add the WebSocket endpoint url.
 ````
 final awsChannel = IOWebSocketChannel.connect("");
 ````
@@ -152,7 +152,7 @@ Pour créer et exécuter l'application type, il faut d'abord obtenir un identifi
 1.  Créez un compte de développeur sur [agora.io](https://dashboard.agora.io/signin/). Une fois le processus d'inscription terminé, vous êtes redirigé vers le tableau de bord.
 2.  Naviguez dans l'arborescence du tableau de bord sur la gauche vers **Projets** > **Liste des projets**.
 3.  Copiez l'identifiant de l'application que vous obtenez du tableau de bord dans un fichier texte.
-Ouvrez le fichier [settings.dart](https://github.com/zakariaBoukernafa/Teleport/blob/master/lib/modes/agora/utils/settings.dart) et ajoutez l'ID de l'application.
+Ouvrez le fichier [settings.dart](https://github.com/zakariaBoukernafa/Teleport/blob/master/Mobile_Application/lib/modes/agora/utils/settings.dart) et ajoutez l'ID de l'application.
 
     ````
       const APP_ID = "" ;
@@ -160,7 +160,7 @@ Ouvrez le fichier [settings.dart](https://github.com/zakariaBoukernafa/Teleport/
 ### Configuration du API Gateway Endpoint  WebSocket
 
 après avoir déployé le WebSocket dans AWS ou dans un autre fournisseur de cloud , allez à 
-[aws.dart](https://github.com/zakariaBoukernafa/Teleport/blob/master/lib/services/aws.dart) et ajoutez l'url du Endpoint WebSocket.
+[aws.dart](https://github.com/zakariaBoukernafa/Teleport/blob/master/Mobile_Application/lib/services/aws.dart) et ajoutez l'url du Endpoint WebSocket.
 ````
 final awsChannel = IOWebSocketChannel.connect("") ;
 ````
